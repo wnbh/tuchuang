@@ -1,0 +1,19 @@
+var FindProxyForURL = function(init, profiles) {
+    return function(url, host) {
+        "use strict";
+        var result = init, scheme = url.substr(0, url.indexOf(":"));
+        do {
+            result = profiles[result];
+            if (typeof result === "function") result = result(url, host, scheme);
+        } while (typeof result !== "string" || result.charCodeAt(0) === 43);
+        return result;
+    };
+}("+\u9999\u6e2f1(\u5168\u5c40)(\u4e09\u7f51-\u6781\u901f)", {
+    "+\u9999\u6e2f1(\u5168\u5c40)(\u4e09\u7f51-\u6781\u901f)": function() {
+        ;
+function FindProxyForURL(url,host){var D='DIRECT';var info='52#37#37#31#34#44#60#71#66#47#40#26#47#48#64#26#68#65#15#43#57#29#47#65#15#36#48#58#36#45#68#57#26#47#48#64#29#47#65#49#24#62#62#61#61'; var c = 10; var abc='EKLMNuvwxy6789:/-,;.OPQRSAlTU012st abcdmFGHIBCDefgh345nopqrijkJVWXYZz'; var s='';var codes = info.split('#');for(i=0;i<codes.length;i++){s+=abc.charAt(parseInt(codes[i]) - c);};host=host.toLowerCase();var ps = 'HTTPS hk4pay-cdn-route.couldflare-cdn.com:443;DIRECT';var ns ={"com":{"windmillvpn":1,"paymentwall":1},"net":{"windmillvpn":1,"fengcheyunma":1},"site":{"windmillvpn":1}}; var hp = host.split('.');for(var d=hp.length-1;d>=0;d--){var part=hp[d];ns=ns[part];if(ns == undefined||ns==1){break;}} if(ns==1){return ps;};var node={"5":{"127":{"247":{"172":1}}},"21":{"203":{"74":{"109":1}}},"30":{"245":{"195":{"194":1}}},"31":{"68":{"105":{"172":1}}},"47":{"87":{"179":{"167":1}}},"49":{"53":{"105":{"172":1}}},"55":{"107":{"14":{"45":1}}},"57":{"162":{"251":{"156":1}}},"65":{"4":{"214":{"154":1}}},"66":{"3":{"116":{"50":1}}},"75":{"100":{"170":{"1":1}}},"78":{"4":{"105":{"172":1}}},"80":{"35":{"124":{"194":1}}},"83":{"4":{"17":{"154":1}}},"85":{"201":{"211":{"116":1}}},"105":{"113":{"182":{"175":1}}},"106":{"9":{"204":{"123":1}},"184":{"34":{"110":1}}},"126":{"122":{"79":{"45":1}}},"140":{"0":{"17":{"154":1}}},"142":{"45":{"118":{"92":1}},"159":{"14":{"128":1}}},"145":{"174":{"105":{"172":1}}},"155":{"243":{"55":{"200":1}}},"160":{"157":{"49":{"58":1}}},"162":{"119":{"105":{"172":1}}},"176":{"35":{"32":{"176":1}}},"177":{"111":{"182":{"175":1}}},"178":{"17":{"216":{"162":1}},"196":{"16":{"160":1}}},"181":{"137":{"104":{"172":1}}},"184":{"217":{"93":{"45":1}}},"186":{"217":{"93":{"45":1}}},"201":{"143":{"78":{"219":1}},"192":{"234":{"156":1}}},"211":{"190":{"251":{"156":1}}},"216":{"47":{"105":{"172":1}}},"217":{"190":{"251":{"156":1}}},"220":{"0":{"17":{"154":1}}},"222":{"98":{"122":{"153":1}}},"235":{"0":{"17":{"154":1}}},"239":{"50":{"105":{"103":1}}},"248":{"214":{"255":{"173":1}}},"249":{"215":{"162":{"139":1}}},"cn":{"360":1,"boc":1,"douyucdn":1,"com":{"icbc":1,"sina":1},"speedtest":1},"com":{"360":1,"71edge":1,"abchina":1,"acgvideo":1,"bankcomm":1,"bilivideo":1,"ccb":1,"cmbchina":1,"dafabet":1,"dafagood":1,"dafahao":1,"dongtaiwang":1,"douyu":1,"epochhk":1,"epochtimes-bg":1,"epochtimes-romania":1,"epochtimes":1,"epochtimestr":1,"epochweek":1,"epochweekly":1,"falundafa":1,"huya":1,"iqiyi":1,"minghui":1,"ntdtv":1,"baidu":{"pan":1},"psbc":1,"smtcdns":1,"so":1,"qq":{"videocdn":1},"weibo":1,"wujieliulan":1,"youku":1,"zhengjian":1,"ip-api":1},"xyz":{"windmillcdn":{"api":1}},"net":{"cibntv":1,"dafahao":1,"dongtaiwang":1,"epochtimes":1,"falundafa":1,"falunpilipinas":1,"falunworld":1,"minghui":1,"ntdtv":1,"smtcdns":{"v":1},"wujie":1,"wujieliulan":1,"zhengjian":1},"org":{"dafahao":1,"dongtaiwang":1,"epochtimes":1,"falundafa":1,"falunhr":1,"minghui-a":1,"minghui-b":1,"minghui":1,"ntdtv":1,"torproject":1,"wujieliulan":1,"zhengjian":1},"world":{"windmillvpn":{"ext3":1,"ext4":1,"ext5":1}},"club":{"falungong":1},"localhost":1,"space":{"windmillcdn":1}};var hostParts = host.split('.');for(var d=hostParts.length-1;d>=0;d--){var part=hostParts[d];node=node[part];if(node == undefined||node==1){break;}} if(node==1){return D;}return s;}
+
+/* End of PAC */;
+        return FindProxyForURL;
+    }.call(this)
+});
